@@ -1,0 +1,116 @@
+#Contact{
+    width: 100%;
+}
+.contactSection {
+    background-color: #0a3d62;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    min-height: 30vh; /* Ensures section takes up at least full screen height */
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.leftSection, .middleSection, .rightSection {
+    flex: 1;
+    margin: 1rem;
+    box-sizing: border-box; /* Prevents overflow */
+}
+
+.logo {
+    width: 100px;
+}
+
+.description {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.socialIcons {
+    margin-top: 1rem;
+}
+
+.icon {
+    color: white;
+    margin: 0 0.3rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.middleSection ul {
+    list-style: none;
+    padding: 0;
+}
+
+.middleSection ul li {
+    margin: 0.5rem 0;
+}
+
+.rightSection p {
+    margin: 0.5rem 0;
+}
+
+.subscriptionBox {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.subscriptionBox input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    flex: 1;
+}
+
+
+
+.footer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Media Queries for mobile devices */
+@media (max-width: 768px) {
+    .container {
+        min-height: 250vh; /* Ensures section takes up at least full screen height */
+        flex-direction: column;
+        align-items: center; /* Centering the content */
+        padding: 0 1rem; /* Add padding to prevent overflow */
+    }
+
+    .leftSection, .middleSection, .rightSection {
+        width: 100%; /* Makes each section take full width */
+        margin: 1rem 0; /* Adds space between sections */
+    }
+
+    .logo {
+        width: 80px; /* Adjusts logo size for smaller screens */
+    }
+
+    .description {
+        font-size: 1rem; /* Ensures readability */
+    }
+
+    .subscriptionBox {
+        flex-direction: column; /* Stacks the input and button vertically */
+        width: 100%; /* Makes the box full width */
+    }
+
+    .subscriptionBox input, .subscriptionBox button {
+        width: 100%; /* Ensures the input and button take full width */
+        margin: 0.5rem 0; /* Adds space between the elements */
+    }
+
+    .footer {
+        font-size: 0.8rem; /* Adjusts font size for better readability on mobile */
+    }
+}

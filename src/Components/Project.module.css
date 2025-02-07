@@ -1,0 +1,234 @@
+#Project{
+  width: 100%;
+}
+
+.projectsSection {
+    padding: 3rem 1rem;
+    color: #fff;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(15, 120, 132, 0.5), rgba(94, 204, 216, 0.5));
+  }
+  
+  .title {
+    font-family: "Spectral SC", serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.5);
+  }
+  .liner{
+    font-family: "Spectral SC", serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+
+  }
+  /* Grid layout for projects */
+  .projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Glassmorphism project card */
+  .projectCard {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    border: 3px solid #0a3d6253;
+
+    position: relative;
+  }
+  
+  /* Slide-in animation */
+  .visible {
+    animation: fadeInUp 0.7s forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .projectCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(45deg, #0f7884, #5eccd8); /* Default hover background */
+  }
+  
+  /* Glowing neon effect */
+  .projectCard::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #0f7884, #5eccd8);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: -1;
+  }
+  
+  .projectCard:hover::before {
+    opacity: 1;
+  }
+  
+  /* Image styling */
+  .imageWrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .projectImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .projectCard:hover .projectImage {
+    transform: scale(1.1);
+  }
+  
+  /* Project details */
+  .details {
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Project title and description */
+  .projectTitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0a3d62; /* Default color */
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #0a3d62; /* Default color */
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  /* Change text color to white on hover */
+  .projectCard:hover .projectTitle,
+  .projectCard:hover .description {
+    color: #fff;
+  }
+  
+  /* Glowing button */
+  .projectButton {
+    display: inline-block;
+    padding: 10px 15px;
+    background: linear-gradient(45deg, #0a3d62, #5eccd8);
+
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s;
+    box-shadow: 0 0 10px rgba(15, 120, 132, 0.5);
+  }
+  
+  .projectButton:hover {
+    background: linear-gradient(45deg, #38c9f1, #289ec5);
+    box-shadow: 0 0 20px rgba(0, 140, 255, 0.8);
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .projectsGrid {
+      grid-template-columns: 1fr;
+    }
+  
+    .projectCard {
+      width: 60%;
+      margin: auto;
+    }
+    .visible {
+      animation: fadeInUp 0.7s forwards;
+    }
+    
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+  
+  /* Adjust hover background color for smaller screens */
+  @media (max-width: 950px) {
+    .projectCard:hover {
+      background: linear-gradient(45deg, #0f7884, #5eccd8); /* Adjust hover background color */
+    }
+    .visible {
+      animation: fadeInUp 0.7s forwards;
+    }
+    
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .projectsGrid {
+      grid-template-columns: 1fr;
+    }
+  
+    .projectCard {
+      width: 85%;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(80px);
+    }
+  
+    .visible {
+      animation: fadeInUpSmooth 1.2s ease-out forwards;
+    }
+  
+    @keyframes fadeInUpSmooth {
+      0% {
+        opacity: 0;
+        transform: translateY(80px);
+      }
+      40% {
+        opacity: 0.5;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+  
+  /* Adjust hover background for smaller screens */
+  @media (max-width: 950px) {
+    .projectCard:hover {
+      background: linear-gradient(45deg, #0f7884, #5eccd8);
+    }
+  }
+  

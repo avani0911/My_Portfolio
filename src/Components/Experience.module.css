@@ -1,0 +1,202 @@
+#Experience{
+  width:100%;
+}
+.experienceSection {
+    padding: 3rem 1rem;
+    color: #0f7884;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    /* background: #f9f9f9; */
+  }
+  
+  .title {
+    font-family: "Spectral SC", serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px #5eccd8;
+  }
+  
+  .timelineContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  /* Optional wrapper if you want extra spacing/margin */
+  .timelineWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Card (timelineEntry) styling */
+  .timelineEntry {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 900px;
+    position: relative;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #0f7884;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Initial state for slide in */
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  
+  /* Slide in when visible */
+  .visible {
+    animation: slideIn 0.6s forwards;
+  }
+  
+  /* Keyframes for the slide in animation */
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .timelineEntry:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .imageWrapper {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  height: auto; /* Adjust dynamically */
+  max-height: 120px; /* Prevents excessive scaling */
+  width: auto;
+  max-width: 220px;
+  overflow: visible; /* Prevents cropping */
+  background-color: transparent;
+  margin-right: 20px;
+  }
+  
+  
+  .companyImage {
+    width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the entire logo is visible */
+  background-color: transparent; /* Avoids unwanted white background */
+  padding: 5px; /* Adds slight spacing if needed */
+  transition: transform 0.3s ease-in-out;
+  }
+  
+  
+  .timelineEntry:hover .companyImage {
+    transform: scale(1.1);
+  }
+  
+  .details {
+    flex-grow: 1;
+    text-align: left;
+  }
+  
+  .companyName {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0f7884;
+    margin-bottom: 0.5rem;
+  }
+  
+  .role {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #5eccd8;
+  }
+  
+  .duration {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: #9b9b9b;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #0f7884;
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+  .introduction{
+    font-size: 20px;
+    font-weight: 800;
+    text-shadow: 1px 1px 2px #5eccd8;
+    margin-bottom: 20px;
+
+  }
+  
+  @media (max-width: 968px) {
+    .timelineEntry {
+      flex-direction: column;
+      align-items: flex-start;
+      border-left: none;
+      border-top: 4px solid #0f7884;
+      padding: 1.5rem;
+      /* Reset transform for mobile so it slides in from the top (optional) */
+      transform: translateY(-50px);
+    }
+    
+    .visible {
+      animation: slideInVertical 0.6s forwards;
+    }
+    
+    @keyframes slideInVertical {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .imageWrapper {
+      margin-bottom: 1rem;
+    }
+  }
+  @media (max-width: 968px) {
+    .timelineEntry {
+      flex-direction: column;
+      align-items: flex-start;
+      border-left: none;
+      border-top: 4px solid #0f7884;
+      padding: 1.5rem;
+  
+      /* Initial hidden state */
+      opacity: 0;
+      transform: translateY(60px);
+    }
+  
+    .visible {
+      animation: slideInVertical 1s ease-out forwards;
+    }
+  
+    @keyframes slideInVertical {
+      0% {
+        opacity: 0;
+        transform: translateY(60px);
+      }
+      50% {
+        opacity: 0.5;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    .imageWrapper {
+      margin-bottom: 1rem;
+    }
+  }
+  

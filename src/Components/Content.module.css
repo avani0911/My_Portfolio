@@ -1,0 +1,697 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&family=Lora:wght@400;700&display=swap');
+
+#Content{
+  width: 100%; 
+
+}
+.profileSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    margin-top: 0.8rem;
+    z-index: 0;  
+    width: 100%; 
+}
+
+
+.helloButton {
+    border: 2px solid black;
+    margin-bottom: 15px;
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: 'Urbanist', sans-serif;
+    background-color: transparent;
+    color: black;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    animation: floatMovement 4s ease-in-out infinite; /* Continuous movement animation */
+}
+
+/* Keyframe for floating movement */
+@keyframes floatMovement {
+    0% {
+        transform: translateX(0) translateY(0); /* Start at the original position */
+    }
+    50% {
+        transform: translateX(3px) translateY(-3px); /* Move a bit to the right and up */
+    }
+    100% {
+        transform: translateX(0) translateY(0); /* Return to the original position */
+    }
+}
+
+
+/* Keep the Title Above Everything */
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Urbanist', sans-serif;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    text-align: center;
+    z-index: 0;
+}
+
+.highlight {
+    color: #5eccd8;
+}
+
+/* Keep Everything in Place */
+.contentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    width: 100%;
+    position: relative;
+}
+
+/* Left Side - Quote */
+
+
+/* Center - Image with Blue Circle */
+.imageContainer {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.blueCircle {
+    width: 600px;
+    height: 300px;
+    background-color: #70d4e0;
+    border-radius: 300px 300px 0 0;
+    position: absolute;
+    bottom: -50px;
+    z-index: 0;
+    clip-path: inset(0 0 50px 0);
+    
+    /* Animation */
+    animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.0);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.0);
+        opacity: 0.8;
+    }
+}
+
+.profileImage {
+    width: 230px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    
+    /* Transition for smooth effect */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.profileImage:hover {
+    transform: scale(1.1);
+
+}
+
+.detailsContainer {
+    width: 30%;
+    text-align: right;
+    font-family: 'Lora', serif;
+    animation: shimmer 3s infinite linear;
+    animation: fadeIn 3s infinite alternate ease-in-out;
+}
+
+/* Shimmering effect for details */
+@keyframes shimmer {
+    0% { opacity: 0.9; }
+    50% { opacity: 1; }
+    100% { opacity: 0.9; }
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.stars {
+    font-size: 1.25rem;
+    
+}
+
+
+.cgpa {
+    margin-left: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    display: inline-block;
+    
+}
+
+
+
+.degree {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    
+}
+
+/* Bouncing effect for Degree */
+/* Quote section animations */
+.quoteContainer {
+    width: 30%;
+    text-align: left;
+    font-weight: 500;
+    color: #000000;
+    font-family: 'Lora', serif;
+    z-index: 3;
+    animation: fadeIn 3s infinite alternate ease-in-out;
+}
+
+
+/* Fade in & scale effect */
+@keyframes fadeIn {
+    0% { opacity: 0.8; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.03); }
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.25rem;
+    animation: fadeSlide 5s infinite alternate ease-in-out;
+}
+
+
+/* Subtle fade & slide effect for quote */
+@keyframes fadeSlide {
+    0% { opacity: 1; transform: translateX(-8px); }
+    100% { opacity: 1; transform: translateX(8px); }
+}
+
+
+/* Base Styles - Large Screens */
+.title {
+    font-size: 4.5rem; /* Base size for large screens */
+}
+
+
+
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 10px;
+  }
+  
+  .iconButton {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d5faff; /* Lightened for contrast */
+    color: #0f7884;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #0f7884;
+    transition: transform 0.3s, background 0.3s;
+    animation: glow 2s infinite alternate;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  
+  .icon {
+    margin-right: 8px;
+    font-size: 1.2rem;
+  }
+  
+  /* Glowing effect */
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 5px #5eccd8;
+    }
+    100% {
+      box-shadow: 0 0 12px #5eccd8;
+    }
+  }
+  
+  /* Hover effects */
+  .iconButton:hover {
+    background: rgba(52, 180, 227, 0.804);
+    transform: scale(1.1);
+    color: white;
+  }
+  
+  /* Narrow Button */
+  .narrowButton {
+    width: 160px; /* Adjust width for the button */
+    padding: 8px 12px;
+    margin-left: auto; /* Align the button to the right */
+  }
+  
+  
+.quoteContainer .quote,
+.detailsContainer .cgpa,
+.detailsContainer .degree {
+    font-size: 1.25rem; /* Base size for large screens */
+    
+}
+    
+    
+
+@media (max-width: 1200px) {
+    .detailsContainer {
+      margin-bottom: 55px;
+    }
+    .blueCircle {
+      width: 450px;
+      height: 250px;
+    }
+    .profileImage {
+      width: 230px;
+      height: auto;
+    }
+    .profileSection {
+      padding: 1rem;
+    }
+    .title {
+      margin-top: 20px;
+      font-size: 4.5rem;
+    }
+    .quoteContainer .quote {
+      font-size: 0.95rem;
+      width: 60%;
+      margin-bottom: 25px;
+    }
+    .detailsContainer .cgpa,
+    .detailsContainer .degree {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+    .detailsContainer .stars {
+      display: block;
+      width: 100%;
+      margin-left: 90px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .detailsContainer {
+      margin-bottom: 55px;
+    }
+    .blueCircle {
+      width: 400px;
+      height: 200px;
+    }
+    .profileImage {
+      width: 200px;
+      height: auto;
+    }
+    .profileSection {
+      padding: 1rem;
+    }
+    .title {
+      margin-top: 20px;
+      font-size: 3.5rem;
+    }
+    .quoteContainer .quote {
+      font-size: 0.85rem;
+      width: 60%;
+      margin-bottom: 25px;
+    }
+    .detailsContainer .cgpa,
+    .detailsContainer .degree {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+    .detailsContainer .stars {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .detailsContainer {
+      margin-bottom: 55px;
+    }
+    .blueCircle {
+      width: 350px;
+      height: 150px;
+    }
+    .profileImage {
+      width: 180px;
+      height: auto;
+    }
+    .profileSection {
+      padding: 1rem;
+    }
+    .title {
+      margin-top: 20px;
+      font-size: 3rem;
+    }
+    .quoteContainer .quote {
+      font-size: 0.75rem;
+      width: 60%;
+      margin-bottom: 25px;
+    }
+    .detailsContainer .cgpa,
+    .detailsContainer .degree {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 0.8rem;
+    }
+    .detailsContainer .stars {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .detailsContainer {
+      margin-bottom: 55px;
+    }
+    .blueCircle {
+      width: 350px;
+      height: 150px;
+    }
+    .profileImage {
+      width: 150px;
+      height: auto;
+    }
+    .profileSection {
+      padding: 1rem;
+    }
+    .title {
+      margin-top: 20px;
+      font-size: 2.5rem;
+    }
+    .quoteContainer .quote {
+      font-size: 0.7rem;
+      width: 60%;
+      margin-bottom: 25px;
+    }
+    .detailsContainer .cgpa,
+    .detailsContainer .degree {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 0.65rem;
+    }
+    .detailsContainer .stars {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      font-size: 0.7rem;
+    }
+  }
+  @media (max-width: 480px){
+    .blueCircle {
+        width: 320px;
+        height: 130px;
+      }
+  }
+  
+  @media (max-width: 400px) {
+    .detailsContainer {
+      margin-bottom: 55px;
+    }
+    .blueCircle {
+      width: 350px;
+      height: 150px;
+    }
+    .profileImage {
+      width: 120px;
+      height: auto;
+    }
+    .profileSection {
+      padding: 1rem;
+    }
+    .title {
+      font-size: 2rem;
+    }
+    .quoteContainer .quote {
+      font-size: 0.7rem;
+      width: 60%;
+      margin-bottom: 25px;
+    }
+    .detailsContainer .cgpa,
+    .detailsContainer .degree {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 0.7rem;
+    }
+    .detailsContainer .stars {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      font-size: 0.7rem;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    .icons {
+        flex-wrap: nowrap; /* Keep buttons in a row */
+      }
+    
+      .iconButton {
+
+        padding: 4px;
+        font-size: 0.75rem;
+        border-radius: 6px;
+        width: 55px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .icon {
+        font-size: 1.2rem;
+        margin-right: 0;
+      }
+    
+      /* Hide text inside buttons on small screens */
+      .iconButton span {
+        display: none;
+      }
+    
+      /* Make Download CV button smaller */
+      .narrowButton {
+        width: 140px;
+        padding: 5px 6px;
+        font-size: 0.8rem;
+        margin-top: 1px;
+  
+      }
+
+  }
+  @media (max-width: 1300px) {
+    .icons {
+        flex-wrap: nowrap; /* Keep buttons in a row */
+      }
+    
+      .iconButton {
+        padding: 4px;
+        font-size: 0.75rem;
+        border-radius: 6px;
+        width: 55px;
+        height: 42px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+    
+      .icon {
+        font-size: 1.2rem;
+        margin-right: 0;
+      }
+    
+      /* Hide text inside buttons on small screens */
+      .iconButton span {
+        display: none;
+      }
+    
+      /* Make Download CV button smaller */
+      .narrowButton {
+        width: 140px;
+        padding: 5px 6px;
+        font-size: 0.8rem;
+        margin-top: 1px;
+  
+      }
+
+  }
+  @media (max-width: 1200px) {
+    .icons {
+        flex-wrap: nowrap; /* Keep buttons in a row */
+      }
+    
+      .iconButton {
+        padding: 4px;
+        font-size: 0.75rem;
+        border-radius: 6px;
+        width: 55px;
+        height: 42px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -30px;
+      }
+    
+      .icon {
+        font-size: 1.2rem;
+        margin-right: 0;
+      }
+    
+      /* Hide text inside buttons on small screens */
+      .iconButton span {
+        display: none;
+      }
+    
+      /* Make Download CV button smaller */
+      .narrowButton {
+        width: 140px;
+        padding: 5px 6px;
+        font-size: 0.8rem;
+        margin-top: 1px;
+  
+      }
+
+  }
+  @media (max-width: 992px){
+    .icons {
+        flex-wrap: nowrap; /* Keep buttons in a row */
+      }
+    
+      .iconButton {
+        padding: 4px;
+        font-size: 0.75rem;
+        border-radius: 6px;
+        width: 45px;
+        height: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -30px;
+      }
+    
+      .icon {
+        font-size: 1.2rem;
+        margin-right: 0;
+      }
+    
+      /* Hide text inside buttons on small screens */
+      .iconButton span {
+        display: none;
+      }
+    
+      /* Make Download CV button smaller */
+      .narrowButton {
+        width: 140px;
+        padding: 5px 6px;
+        font-size: 0.8rem;
+        margin-top: 1px;
+  
+      }
+  }
+
+  
+  @media (max-width: 768px) {
+    .icons {
+      flex-wrap: nowrap; /* Keep buttons in a row */
+    }
+  
+    .iconButton {
+      padding: 3px;
+      font-size: 0.75rem;
+      border-radius: 6px;
+      width: 38px;
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -30px;
+    }
+  
+    .icon {
+      font-size: 1rem;
+      margin-right: 0;
+    }
+  
+    /* Hide text inside buttons on small screens */
+    .iconButton span {
+      display: none;
+    }
+  
+    /* Make Download CV button smaller */
+    .narrowButton {
+        width: 120px;
+        padding: 5px 6px;
+        font-size: 0.7rem;
+        margin-top: -20px;
+
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .icons{
+        margin-left: -10px;
+    }
+    .iconButton {
+      padding: 3px;
+      width: 30px;
+      height: 30px;
+      border-radius: 5px;
+      margin-top: -40px;
+
+    }
+  
+    .icon {
+      font-size: 0.9rem;
+    }
+  
+    /* Make Download CV button even smaller */
+    .narrowButton {
+      width: 90px;
+      padding: 4px;
+      font-size: 0.62rem;
+      margin-left:30px ;
+      margin-top: -20px;
+    }
+  }
+  

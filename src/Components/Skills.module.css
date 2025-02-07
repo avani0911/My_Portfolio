@@ -1,0 +1,144 @@
+/* Skills Section Styling */
+#Skills{
+  width: 100%;
+}
+.skillsSection {
+  background: url('./assets/smoll.png') center/cover no-repeat;
+  padding: 2rem 1rem;
+  color: #0f7884; /* Lightened text color for better visibility */
+  width: 100%;
+  margin: auto;
+  margin-top: -47px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.skillsContainer, .skillsTitle, .skillCategory {
+  position: relative;
+  z-index: 2;
+}
+
+.skillsTitle {
+  width: 20%;
+  font-family: "Spectral SC", serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: auto;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px  #5eccd8/* Softer shadow for better readability */
+}
+.skillsDescription {
+  font-size: 1.1rem;
+  color: #0f7884;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.skillCategory {
+  background: #ddeffa; /* Lighter background shade */
+  padding: 1.5rem;
+  border-radius: 15px;
+  width: 280px;
+  text-align: center;
+  border: 2px solid #0f7884;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease-in-out;
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.skillCategory:hover {
+  transform: scale(1.05);
+}
+
+.categoryTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #0f7884; /* Lighter text shade */
+}
+
+.skillIconsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.skillIcon {
+  font-weight: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d5faff; /* Lightened for contrast */
+  color: #0f7884;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #0f7884;
+  transition: transform 0.3s, background 0.3s;
+  animation: glow 2s infinite alternate;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px #5eccd8; }
+  100% { box-shadow: 0 0 12px #5eccd8; }
+}
+
+.skillIcon:hover {
+  background: rgba(52, 180, 227, 0.804);
+  transform: scale(1.1);
+  color: white;
+}
+
+
+/* Media Query Adjustments */
+@media (max-width: 1200px) {
+  .skillsSection{
+    margin-top: -47px;
+  }
+  
+}
+
+@media (max-width: 992px) {
+  .skillsSection{
+    margin-top: -42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skillsSection{
+    margin-top: -37px;
+  }
+}
+
+@media (max-width: 576px) {
+  .skillsSection{
+    margin-top: -32px;
+  }
+}
+
+@media (max-width: 400px) {
+  .skillsSection{
+    margin-top: -27px;
+  }
+  
+}
+
+
+
