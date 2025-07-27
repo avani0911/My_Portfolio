@@ -58,7 +58,7 @@ const ProfileSection = () => {
         <div className={styles.detailsContainer}>
           <div className={styles.rating}>
             <span className={styles.stars}>⭐⭐⭐⭐</span>
-            <span className={styles.cgpa}>9.30 CGPA</span>
+            <span className={styles.cgpa}>9.31CGPA</span>
           </div>
           <p className={styles.degree}>B.Tech Computer Engineer</p>
           <br/>
