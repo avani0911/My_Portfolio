@@ -58,12 +58,12 @@ const ProfileSection = () => {
         <div className={styles.detailsContainer}>
           <div className={styles.rating}>
             <span className={styles.stars}>⭐⭐⭐⭐</span>
-            <span className={styles.cgpa}>9.31CGPA</span>
+            <span className={styles.cgpa}>9.255CGPA</span>
           </div>
           <p className={styles.degree}>B.Tech Computer Engineer</p>
           <br/>
           {/* Download CV Button */}
-          <a href="https://drive.google.com/file/d/1hfWS7A0ITrbtBRB0tezOoJ3hVMnz3fir/view?usp=sharing" download className={`${styles.iconButton} ${styles.narrowButton}`}>
+          <a href="https://drive.google.com/file/d/1hzMaHt2QNV3kCF-iVdXN0rwhFu7NjWpf/view?usp=sharing" download className={`${styles.iconButton} ${styles.narrowButton}`}>
       <FaDownload className={styles.icon} /> View Resume </a>
         </div>
       </div>
